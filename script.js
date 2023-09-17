@@ -1,12 +1,12 @@
 const myLibrary = [];
 
-function Book(name, author, read) {
-  this.name = name;
+function Book(title, author, read) {
+  this.title = title;
   this.author = author;
   this.read = Boolean(read);
 }
 
 function addBookToLibrary() {
-  const newBook = new Book(inputName, inputAuthor, inputRead)
+  const newBook = new Book(inputTitle, inputAuthor, inputRead)
   myLibrary.push(newBook)
 }

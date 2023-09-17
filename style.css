@@ -1,0 +1,61 @@
+input:focus {
+    outline: none;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: #1d1d1d;
+    height: 100vh;
+}
+
+.newBook {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    text-align: center;
+    background-image: linear-gradient(180deg, #015949, #1d1d1d);
+    grid-column: 1 / 2;
+}
+
+h2 {
+    color: white;
+    text-transform: uppercase;
+}
+
+.newBook label, .newBook div {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+.newBook input {
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+}
+
+input[type="checkbox"] {
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    width: .8em;
+    height: .8em;
+    border: 0.15em solid white;
+    border-radius: 0.3em;
+  }
+
+.newBook button {
+    align-self: center;
+    width: 35%;
+    height: 25px;
+    border-radius: 25px;
+    color: white;
+    border: solid #ffffff 1px;
+    background-color: #015949;
+    cursor: pointer;
+}
