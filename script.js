@@ -24,11 +24,13 @@ function addBookToLibrary(event) {
   inputRead.checked = false;
   libraryDisplay.innerHTML = ""
   displayBooks(myLibrary)
+  console.log(myLibrary)
 }
 
 function displayBooks(list) {
   list.forEach((book) => {
     const bookCard = document.createElement('div');
+    bookCard.dataset.index = myLibrary.indexOf(book);
     const markup = 
     `
     <h3>${book.title}</h3>
@@ -47,6 +49,7 @@ function displayBooks(list) {
   });
 
   changeColor();
+  removeBook();
 }
 
 function changeColor() {
@@ -56,7 +59,16 @@ function changeColor() {
       e.target.parentNode.classList.toggle('read');
     });
   });
+}
 
+function removeBook() {
+  const removeButton = document.querySelectorAll('.remove');
+  removeButton.forEach( button => {
+    button.addEventListener('click', function(e) {
+      const index = e.target.parentNode.dataset.index;
+      myLibrary.splice(index, 1);
+    });
+  });
 }
 
 addButton.addEventListener("click", addBookToLibrary)
