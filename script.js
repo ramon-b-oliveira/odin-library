@@ -22,12 +22,12 @@ function addBookToLibrary(event) {
   inputTitle.value = "";
   inputAuthor.value = "";
   inputRead.checked = false;
-  libraryDisplay.innerHTML = ""
   displayBooks(myLibrary)
   console.log(myLibrary)
 }
 
 function displayBooks(list) {
+  libraryDisplay.innerHTML = ""
   list.forEach((book) => {
     const bookCard = document.createElement('div');
     bookCard.dataset.index = myLibrary.indexOf(book);
@@ -67,6 +67,7 @@ function removeBook() {
     button.addEventListener('click', function(e) {
       const index = e.target.parentNode.dataset.index;
       myLibrary.splice(index, 1);
+      displayBooks(myLibrary);
     });
   });
 }
