@@ -56,7 +56,9 @@ function changeColor() {
   const toggleReadButton = document.querySelectorAll('.toggle');
   toggleReadButton.forEach( button => {
     button.addEventListener('click', function(e) {
+      const index = e.target.parentNode.dataset.index;
       e.target.parentNode.classList.toggle('read');
+      myLibrary[index].read = !myLibrary[index].read
     });
   });
 }
