@@ -12,6 +12,9 @@ function Book(title, author, read) {
 }
 
 function addBookToLibrary(event) {
+  if (inputTitle.value === '' || inputAuthor.value === '') {
+    return
+  }
   let read = false
   if (inputRead.checked) {
     read = true
