@@ -12,29 +12,31 @@
         <h2>Adding a new book?</h2>
 
         <label for="title">Title:</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" required>
 
         <label>Author:</label>
-        <input type="text" name="author" id="author">
+        <input type="text" name="author" id="author" required>
 
         <div>
             <label for="read">Read?</label>
             <input type="checkbox" name="read" id="read">
         </div>
 
-        <button type="submit" class="button">ADD</button>
+        <button type="submit" class="button add">ADD</button>
     </form>
     <div class="library">
         <div class="book read">
             <h3>The Hobbit</h3>
             <p>JRR Tolkien</p>
-            <button class="button">remove</button>
+            <button class="button remove">remove</button>
+            <button class="button toggle">read</button>
         </div>
 
-        <div class="book notread">
+        <div class="book">
             <h3>A Song of Ice And Fire</h3>
             <p>George Martin</p>
-            <button class="button">remove</button>
+            <button class="button remove">remove</button>
+            <button class="button toggle">read</button>
         </div>
     </div>
 </body>
