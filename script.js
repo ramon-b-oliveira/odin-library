@@ -47,7 +47,6 @@ function displayBooks(list) {
   });
 
   changeColor();
-  
 }
 
 function changeColor() {
